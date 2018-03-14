@@ -1,7 +1,7 @@
 #!/bin/bash -
 # wav2mp3
 
-FILES=`ls *.wav | sed 's/ \+/@/g'`
+FILES=`find . -name "*.wav" -type f | sed 's/ \+/@/g'`
 
 for i in $FILES; do
 OUT=`echo "$i" | sed -e 's/.wav//' | tr -s '@' ' ' `
